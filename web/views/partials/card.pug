@@ -1,0 +1,8 @@
+div(class="panel panel-" + card.type)
+  .panel-heading
+    h3.panel-title= card.title
+    h5= card.subtitle
+  .panel-body
+    .card
+      each row in card.rows
+        include card_row

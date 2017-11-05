@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .page-header
+    h3 My Cars
+  .row
+    each card in cars
+      .col-md-6
+        include partials/card
+        
+  .page-header
+    h3 Track a Car
+  form.form-horizontal(method='POST')
+    .form-group
+      label.col-sm-3.control-label(for='text') VIN (Vehicle Identification Number)
+      .col-sm-7
+        input.form-control(type='text', name='text', id='text', placeholder='e.g. 09512903123', autofocus, required)
+    .form-group
+      .col-sm-offset-3.col-sm-7
+        button.col-sm-3.btn.btn-primary(type='submit')
+          i.fa.fa-car
+          | Add
+    

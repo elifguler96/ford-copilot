@@ -1,0 +1,14 @@
+.card-row
+  if row.status == 'green'
+    span.sm-box.bggreen2
+  else if row.status == 'yellow'
+    span.sm-box.bgyellow2
+  else if row.status == 'red'
+    span.sm-box.bgred2
+  else
+    span.sm-box
+  .card-col
+    b
+      | #{row.text}
+  .card-col
+    | #{row.value}
